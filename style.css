@@ -13,6 +13,10 @@ body {
     background-color: #070a13;
 }
 
+hr {
+    border-color: burlywood;
+}
+
 header {
     width: 100%;
     height: 80px;
@@ -79,7 +83,8 @@ nav a:hover {
     width: 10rem;
 }
 
-h1, h2 {
+h1, h2, h3 {
+    text-decoration: underline;
     color: var(--headingcolor)
 }
 
@@ -110,6 +115,7 @@ p {
 
 
 .aboutME {
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,10 +132,47 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
+.aboutME .highlight {
+    color:#e11d48;
+    font-weight: 20px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    text-shadow: ;
+}
 
+#projects {
+    padding: 20px;
+}
+
+#projects-grid {
+    border: 2px solid red;
+    height: 100%; 
+    display: grid;
+    gap: 40px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "ecom ecom-img"
+    "social social-img"
+    "dashboard dashboard-img"
+    "music music-img";
+}
+
+h3 {text-decoration: none;}
+
+
+#projects-grid img {
+    width: 30em;
+    border-radius: 30px;
+}
+
+#music-img
+
+
+/* Create an effect whereby when you hover over the projects, the H3 changes color to rose and the picture increase in size. */
+ 
 
 
 
@@ -138,6 +181,7 @@ p {
 
 
 footer {
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,6 +228,29 @@ footer .fa-brands {
     }
  */
 
+}
+
+@media screen and (max-width: 600px) {
+    #projects-grid {
+        display: grid;
+        row-gap: 1px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+        "ecom"
+        "ecom-img"
+        "social"
+        "social-img"
+        "dashboard"
+        "dashboard-img"
+        "music"
+        "music-img";
+    }
+
+    #projects-grid img {
+        width: 25em;
+
+    }
 }
 
 
