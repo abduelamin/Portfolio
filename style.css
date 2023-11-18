@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --headingcolor: burlywood;
+    --fontcolor: white;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #070a13;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    padding: 0px 10px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: #94a3b8;
+    width: 300px;
+}
+
+nav a:hover {
+    transition: all .4s ease-in 0s;
+    color: #e11d48;
+}
+
+#btn {
+    background-color: #e11d48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: .5em;
+    height: 50px;
+    width: 100px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+
+#btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: 20px;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: auto;
+    /* border: 2px solid blue; */
+    margin: 0px 5em;
+}
+
+#hero img {
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+}
+
+h1 {
+    color: var(--headingcolor)
+}
+
+.intro {
+    color: white;
+}
+
+.stack {
+    display: flex;
+    justify-content: space-evenly;
+    height: 10em;
+    width: 80%;
+}
+
+.stack .fa-brands{
+    color: #e11d48 ;
+    font-size: 10em;
+}
+
+.fa-brands:hover {
+    animation: stack .5s linear 0s 1 forwards normal;
+}
+@keyframes stack {
+    0% {transform:translateY(0%);}
+    50% {transform:translateY(-10%);}
+    100% {transform:translateY(0%);}
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* //main footer styling that goes  before media query//
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+footer .fa-brands {
+    color: aqua;
+    font-size: 5em;
+} */
+
+@media screen and (max-width: 600px) {
+    
+    .stack .fa-brands {
+        transition: all 2s linear 0s;
+        font-size: 5em;
+    }
+
+    nav {
+        transition: all 2s linear 0s;
+        width: 320px;
+    }
+    header {
+        transition: all 2s linear 0s;
+        width: 100%;
+        height: 80px;
+        padding: 0px 10px;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }       
+/* Footer media queries will only work after the inital footer detials have been written above. Therefore, once your page is done, move all mdeia queries to the bottom of CSS so that they can display. OTHERWISE the media query won't take into effect if the intial styling is written after the media query.
+
+    footer .fa-brands {
+        font-size: 2.5em;
+    }
+ */
+
+}
+
+
