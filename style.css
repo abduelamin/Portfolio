@@ -4,7 +4,7 @@
 }
 
 :root {
-    --headingcolor: burlywood;
+    --designcolor: burlywood;
     --fontcolor: white;
 }
 body {
@@ -14,14 +14,13 @@ body {
 }
 
 hr {
-    border-color: burlywood;
+    border-color: var(--designcolor);
 }
 
 header {
     width: 100%;
     height: 80px;
     padding: 0px 10px;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -83,12 +82,12 @@ nav a:hover {
     border-radius: 50%;
     height: 10rem;
     width: 10rem;
-    border: 3px solid burlywood;
+    border: 3px solid var(--designcolor);
 }
 
 h1, h2, h3 {
     text-decoration: underline;
-    color: var(--headingcolor)
+    color: var(--designcolor)
 }
 
 p {
@@ -135,7 +134,7 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 3px solid burlywood;
+    border: 3px solid var(--designcolor);
 }
 
 .aboutME .highlight {
@@ -148,11 +147,16 @@ p {
 #projects {
     text-align: center;
     padding: 20px;
-    padding-left: 12%;
+    
+}
+
+#projects h2 {
+    margin-bottom: 52px;
 }
 
 
 #projects-grid {
+    padding-left: 12%;
     height: 100%; 
     display: grid;
     gap: 40px;
@@ -172,7 +176,7 @@ h3 {text-decoration: none;}
     margin-top: 20px;
     width: 30em;
     border-radius: 30px;
-    border: 2px solid burlywood;
+    border: 2px solid var(--designcolor);
 }
 
 #music-img {
@@ -191,7 +195,7 @@ h3 {text-decoration: none;}
 /* Interactivity to the projects section */
 
 .mywork .fa-solid {
-    color: burlywood;
+    color: var(--designcolor);
     font-size: 3em;
 
 }
@@ -202,14 +206,15 @@ h3 {text-decoration: none;}
 }
 
 
-.imgs:hover {
-    transition: all 0.5s linear 0s;
+#projects-grid img:hover {
+    transition: all 0.3s linear 0s;
     transform: scale(1.1);
+    border: 2px solid #e11d48;
 }
- 
+
 .mywork:hover {
     background-color: #e11d48;
-    border: 2px solid burlywood;
+    border: 2px solid var(--designcolor);
 }
 
 
@@ -228,11 +233,11 @@ footer {
 }
 
 footer .fa-brands {
-    color: burlywood;
+    color: var(--designcolor);
     font-size: 5em;
 }
 
-
+/* All media queries */
 
 @media screen and (max-width: 600px) {
     
@@ -270,24 +275,25 @@ footer .fa-brands {
 
 }
 
-@media screen and (min-width: 650px) and (max-width: 820px) {
+
+@media screen and (min-width: 650px) and (max-width: 920px) {
 
     #projects-grid .imgs {
         width: 32em;
-        transition: all 1s linear 0s;
+        transition: all .1s linear 0s;
     }
 
     #projects-grid #music-img {
         width: 32em;
-        transition: all 1s linear 0s;
+        transition: all .1s linear 0s;
     }
    
 }
 
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 920px) {
     #projects-grid {
-        transition: all 1s linear 0s;
+        transition: all .1s linear 0s;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 1fr);
@@ -307,12 +313,4 @@ footer .fa-brands {
         width: 25em;
 
     }
-}
-
-
-
-
-
-.imgs {
-    border: 2px solid green;
 }
