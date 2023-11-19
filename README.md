@@ -24,6 +24,7 @@ I learnt many important things from building this portfolio page, the most impor
 
 This webpage is designed as a read-only webpage - It is a way for the reader to appreciate my work as a front-end developer. A key aspect of this page is the interactivity, from project banners, icons and Images for a more engaging experience. You can access the webpage [here](https://abduelamin.github.io/Portfolio/)
 
+![Webpage screenshot](https://github.com/abduelamin/Portfolio/assets/149680577/8b2327b7-0539-4297-a701-a00c60cfd589)
 
 ## Contributing
 
